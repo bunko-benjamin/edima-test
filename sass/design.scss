@@ -33,7 +33,6 @@ body {
   width: 368px;
   height: 240px;
   margin: 0 auto;
-  background-color: yellow;
 }
 #form {
   background-color: $c0;
@@ -92,3 +91,38 @@ body {
     }
   }
 }
+
+.flip-card {
+  width: inherit;
+  height: inherit;
+  perspective: 1000px;
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .front {
+      background-color: crimson; // todo temp
+    }
+
+    .back {
+      background-color: dodgerblue; // todo temp
+      transform: rotateY(180deg);
+    }
+  }
+  &.turn {
+    .inner {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
