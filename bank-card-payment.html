@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Fizetés</title>
+    <link rel="stylesheet" href="css/design.css" type="text/css">
 </head>
 <body>
-
+    <div id="page">
+        <div id="card">
+            card
+        </div>
+        <div id="form">
+            <div class="row">
+                <label for="bankcardnum">Kártyaszám</label>
+                <input type="text" name="bankcardnum">
+            </div>
+            <div class="row">
+                <label for="bankcardowner">Kártyabirtokos neve</label>
+                <input type="text" name="bankcardowner">
+            </div>
+            <div class="row extra group">
+                <div>
+                    <label for="validfrom"></label>
+                    <input type="text" name="validfrom">
+                    <span>/</span>
+                    <input type="text" name="validto">
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" name="cvv">
+                </div>
+            </div>
+            <div class="row">
+                <label for="phone">Telefonszám</label>
+                <input type="text" name="phone">
+            </div>
+            <input type="submit" name="submit" value="Küldés">
+        </div>
+    </div>
 </body>
 </html>

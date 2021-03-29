@@ -1,0 +1,22 @@
+@mixin br($size) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
+}
+
+@mixin bs($set) {
+  -webkit-box-shadow: $set;
+  -moz-box-shadow: $set;
+  box-shadow: $set;
+}
+
+@mixin group(){
+  .group:before,
+  .group:after {
+    content: "";
+    display: table;
+  }
+  .group:after {
+    clear: both;
+  }
+}

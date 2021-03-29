@@ -1,1 +1,32 @@
 @import "minireset";
+@import "functions";
+
+$c0: #fff;
+$c1: #e0e3e5;
+$c2: #182c48;
+$c3: #a5bf39;
+
+.group {
+  @include group();
+}
+
+body {
+  background-color: $c1;
+}
+#page {
+  width: 640px;
+  margin: 85px auto 80px;
+}
+#card {
+  position: relative;
+  width: 368px;
+  height: 240px;
+  margin: 0 auto;
+  background-color: yellow;
+}
+#form {
+  background-color: $c0;
+  margin-top: -120px;
+  padding: 170px 50px 70px;
+  @include br(20px);
+}
