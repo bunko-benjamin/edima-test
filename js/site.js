@@ -16,6 +16,10 @@ var Site = {
         $('#bank-card-cvv').on('keyup', function () {
             Site.CardUpdate('cvv', $(this).val());
         });
+        $('#number, #name, #date').on('click', function () {
+            Site.InputFocus($(this).data('input'));
+            // info cvv-nek nincs értelme, mert csak akkor látszik ha van amúgy is focusa
+        });
     },
     CardRotate: function (set) {
         $('.flip-card').toggleClass('turn', set);
@@ -27,6 +31,9 @@ var Site = {
         } else {
             $('#' + type).text(data);
         }
+    },
+    InputFocus: function (el) {
+        $('#bank-card-' + el).focus();
     }
 };
 
