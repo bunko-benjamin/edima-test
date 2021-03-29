@@ -5,13 +5,24 @@ $c0: #fff;
 $c1: #e0e3e5;
 $c2: #182c48;
 $c3: #a5bf39;
+$c3h: #b0d02a;
 
-.group {
-  @include group();
+@include group();
+
+html { -webkit-text-size-adjust: none; -webkit-appearance:none; }
+input::-moz-focus-inner { border:0; }
+a, a:focus, a:visited, a:active, input, button, textarea, select { outline: none; }
+textarea { resize:none; }
+p { word-wrap: break-word; }
+input { border: none; }
+
+html, input {
+  font-size: 18px;
 }
 
 body {
   background-color: $c1;
+  color: $c2;
 }
 #page {
   width: 640px;
@@ -29,4 +40,55 @@ body {
   margin-top: -120px;
   padding: 170px 50px 70px;
   @include br(20px);
+  .row {
+    margin-bottom: 30px;
+    span {
+      font-size: 36px;
+      display: inline-block;
+      margin: 0 5px;
+      vertical-align: -6px;
+    }
+    &.extra {
+      div {
+        float: left;
+        width: 150px;
+        &:first-child {
+          width: calc(100% - 180px);
+        }
+      }
+      input {
+        text-align: center;
+      }
+    }
+  }
+  label {
+    display: block;
+    margin-bottom: 7px;
+  }
+  input {
+    width: calc(100% - 30px);
+    padding: 15px 20px;
+    @include br(4px);
+    border: 1px solid $c1;
+    &:focus {
+      border-color: $c2;
+    }
+    &[type="submit"] {
+      margin-top: 30px;
+      background-color: $c3;
+      color: $c0;
+      font-size: 24px;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: $c3h;
+      }
+    }
+    &.valid-date {
+      width: 90px;
+    }
+    &.cvv {
+      width: 150px;
+    }
+  }
 }

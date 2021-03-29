@@ -13,27 +13,27 @@
         <div id="form">
             <div class="row">
                 <label for="bankcardnum">Kártyaszám</label>
-                <input type="text" name="bankcardnum">
+                <input type="text" name="bankcardnum" minlength="19" maxlength="19">
             </div>
             <div class="row">
                 <label for="bankcardowner">Kártyabirtokos neve</label>
-                <input type="text" name="bankcardowner">
+                <input type="text" name="bankcardowner" maxlength="128">
             </div>
             <div class="row extra group">
                 <div>
-                    <label for="validfrom"></label>
-                    <input type="text" name="validfrom">
+                    <label for="validfrom">Lejárati dátum</label>
+                    <input type="text" name="validfrom" class="valid-date" minlength="2" maxlength="2">
                     <span>/</span>
-                    <input type="text" name="validto">
+                    <input type="text" name="validto" class="valid-date" minlength="2" maxlength="2">
                 </div>
                 <div>
                     <label for="cvv">CVV</label>
-                    <input type="text" name="cvv">
+                    <input type="text" name="cvv" class="cvv" minlength="3" maxlength="3">
                 </div>
             </div>
             <div class="row">
                 <label for="phone">Telefonszám</label>
-                <input type="text" name="phone">
+                <input type="text" name="phone" maxlength="15">
             </div>
             <input type="submit" name="submit" value="Küldés">
         </div>
