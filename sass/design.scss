@@ -8,6 +8,7 @@ $c3: #a5bf39;
 $c3h: #b0d02a;
 $c4: #d7dadc;
 $c5: #efefef;
+$c6: #c23318;
 
 @include group();
 
@@ -19,6 +20,7 @@ p { word-wrap: break-word; }
 input { border: none; }
 
 html, input {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; // todo spec font: OpenSans
   font-size: 18px;
 }
 input {
@@ -30,6 +32,7 @@ input {
 body {
   background-color: $c1;
   color: $c2;
+  line-height: 21px;
 }
 #page {
   width: 640px;
@@ -72,6 +75,11 @@ body {
   label {
     display: block;
     margin-bottom: 7px;
+    &.error {
+      font-size: 14px;
+      color: $c6;
+      margin-top: 4px;
+    }
   }
   input {
     width: calc(100% - 30px);

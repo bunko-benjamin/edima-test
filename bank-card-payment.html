@@ -53,35 +53,40 @@
 
         </div>
         <div id="form">
-            <div class="row">
-                <label for="bankcardnum">Kártyaszám</label>
-                <input type="text" name="bankcardnum" id="bank-card-num" minlength="19" maxlength="19">
-            </div>
-            <div class="row">
-                <label for="bankcardowner">Kártyabirtokos neve</label>
-                <input type="text" name="bankcardowner" id="bank-card-owner" maxlength="128">
-            </div>
-            <div class="row extra group">
-                <div>
-                    <label for="validyear">Lejárati dátum</label>
-                    <input type="text" name="validyear" id="bank-card-date-year" class="valid-date" minlength="2" maxlength="2">
-                    <span>/</span>
-                    <input type="text" name="validmonth" id="bank-card-date-month" class="valid-date" minlength="2" maxlength="2">
+            <form action="">
+                <div class="row">
+                    <label for="bankcardnum">Kártyaszám</label>
+                    <input type="text" name="bankcardnum" id="bank-card-num" minlength="19" maxlength="19">
                 </div>
-                <div>
-                    <label for="cvv">CVV</label>
-                    <input type="text" name="cvv" id="bank-card-cvv" class="cvv" minlength="3" maxlength="3">
+                <div class="row">
+                    <label for="bankcardowner">Kártyabirtokos neve</label>
+                    <input type="text" name="bankcardowner" id="bank-card-owner" maxlength="128">
                 </div>
-            </div>
-            <div class="row">
-                <label for="phone">Telefonszám</label>
-                <input type="text" name="phone" maxlength="15">
-            </div>
-            <input type="submit" name="submit" value="Küldés">
+                <div class="row extra group">
+                    <div>
+                        <!-- todo year és month külön blokkba valid msg miatt, h ne törje le -->
+                        <label for="validyear">Lejárati dátum</label>
+                        <input type="text" name="validyear" id="bank-card-date-year" class="valid-date" minlength="2" maxlength="2">
+                        <span>/</span>
+                        <input type="text" name="validmonth" id="bank-card-date-month" class="valid-date" minlength="2" maxlength="2">
+                    </div>
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input type="text" name="cvv" id="bank-card-cvv" class="cvv" minlength="3" maxlength="3">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="phone">Telefonszám</label>
+                    <input type="text" name="phone" id="phone" maxlength="15">
+                </div>
+                <input type="submit" name="submit" id="bank-card-submit" value="Küldés" data-loading="Kérjük várj ...">
+            </form>
         </div>
     </div>
 
     <script defer src="js/jquery-3.5.0.min.js"></script>
+    <script defer src="js/jquery.validate.min.js"></script>
+    <script defer src="js/messages_hu.min.js"></script>
     <script defer src="js/site.js"></script>
 </body>
 </html>
