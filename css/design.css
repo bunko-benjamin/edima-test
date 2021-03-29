@@ -118,6 +118,12 @@ html, input {
   font-size: 18px;
 }
 
+input[type=text] {
+  -webkit-box-shadow: inset 0 4px 18px 0 #efefef;
+  -moz-box-shadow: inset 0 4px 18px 0 #efefef;
+  box-shadow: inset 0 4px 18px 0 #efefef;
+}
+
 body {
   background-color: #e0e3e5;
   color: #182c48;
@@ -142,6 +148,9 @@ body {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  -webkit-box-shadow: 0 0 20px 0 #d7dadc;
+  -moz-box-shadow: 0 0 20px 0 #d7dadc;
+  box-shadow: 0 0 20px 0 #d7dadc;
 }
 #form .row {
   margin-bottom: 30px;
@@ -214,13 +223,12 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-}
-.flip-card .inner .front {
-  background-color: crimson;
+  background-image: url("../images/card.min.png");
+  background-repeat: no-repeat;
 }
 .flip-card .inner .back {
-  background-color: dodgerblue;
   transform: rotateY(180deg);
+  background-position: 0 -240px;
 }
 .flip-card.turn .inner {
   transform: rotateY(180deg);
